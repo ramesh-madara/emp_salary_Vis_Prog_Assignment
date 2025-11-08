@@ -121,7 +121,7 @@ Before running this application, ensure you have the following installed:
     tipAmount DECIMAL(10, 2) NOT NULL
    );
    -- Attendance Table
-   CREATE TABLE empAttendance (
+   CREATE TABLE empAttendance (-
     empID INT NOT NULL,
     [date] DATE NOT NULL,
     inTime TIME NULL,
@@ -250,7 +250,15 @@ This project is part of a Visual Programming assignment.
 
 ## 👤 Author
 
-Developed as part of Visual Programming I course assignment.
+Developed as part of Visual Programming I course group assignment.
+
+**Group Members:**
+- Member 1 - Student Number: XXXXXX
+- Member 2 - Student Number: XXXXXX
+- Member 3 - Student Number: XXXXXX
+- Member 4 - Student Number: XXXXXX
+- Member 5 - Student Number: XXXXXX
+
 
 ## 📞 Support
 
