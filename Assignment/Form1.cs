@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using PdfSharp.Fonts;
 namespace Assignment
 {
     public partial class Form1 : MaterialForm
@@ -16,6 +17,8 @@ namespace Assignment
         public Form1()
         {
             InitializeComponent();
+           
+
             var materialSkinManager = MaterialSkinManager.Instance;
 
             // Add this form to be managed by the MaterialSkinManager
@@ -45,6 +48,11 @@ namespace Assignment
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucEmployee1_Load(object sender, EventArgs e)
         {
 
         }

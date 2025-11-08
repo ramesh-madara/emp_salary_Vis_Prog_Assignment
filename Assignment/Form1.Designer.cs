@@ -30,18 +30,26 @@
         {
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ucEmployee1 = new Assignment.ucEmployee();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ucEmployee1 = new Assignment.ucEmployee();
             this.ucAttendance1 = new Assignment.ucAttendance();
+            this.ucDailyTotals1 = new Assignment.ucDailyTotals();
+            this.ucPayroll1 = new Assignment.ucPayroll();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Controls.Add(this.tabPage1);
+            this.materialTabControl1.Controls.Add(this.tabPage3);
+            this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
@@ -64,14 +72,6 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // ucEmployee1
-            // 
-            this.ucEmployee1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucEmployee1.Location = new System.Drawing.Point(3, 3);
-            this.ucEmployee1.Name = "ucEmployee1";
-            this.ucEmployee1.Size = new System.Drawing.Size(1201, 640);
-            this.ucEmployee1.TabIndex = 0;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.ucAttendance1);
@@ -83,6 +83,36 @@
             this.tabPage1.Text = "Attendance";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.ucDailyTotals1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1207, 646);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Daily Totals";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.ucPayroll1);
+            this.tabPage4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1207, 646);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Reports";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // ucEmployee1
+            // 
+            this.ucEmployee1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucEmployee1.Location = new System.Drawing.Point(3, 3);
+            this.ucEmployee1.Name = "ucEmployee1";
+            this.ucEmployee1.Size = new System.Drawing.Size(1201, 640);
+            this.ucEmployee1.TabIndex = 0;
+            this.ucEmployee1.Load += new System.EventHandler(this.ucEmployee1_Load);
+            // 
             // ucAttendance1
             // 
             this.ucAttendance1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -90,6 +120,22 @@
             this.ucAttendance1.Name = "ucAttendance1";
             this.ucAttendance1.Size = new System.Drawing.Size(1201, 640);
             this.ucAttendance1.TabIndex = 0;
+            // 
+            // ucDailyTotals1
+            // 
+            this.ucDailyTotals1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucDailyTotals1.Location = new System.Drawing.Point(0, 0);
+            this.ucDailyTotals1.Name = "ucDailyTotals1";
+            this.ucDailyTotals1.Size = new System.Drawing.Size(1207, 646);
+            this.ucDailyTotals1.TabIndex = 0;
+            // 
+            // ucPayroll1
+            // 
+            this.ucPayroll1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPayroll1.Location = new System.Drawing.Point(0, 0);
+            this.ucPayroll1.Name = "ucPayroll1";
+            this.ucPayroll1.Size = new System.Drawing.Size(1207, 646);
+            this.ucPayroll1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -104,6 +150,8 @@
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -115,6 +163,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private ucEmployee ucEmployee1;
         private ucAttendance ucAttendance1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private ucDailyTotals ucDailyTotals1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private ucPayroll ucPayroll1;
     }
 }
 
