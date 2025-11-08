@@ -65,7 +65,7 @@ Before running this application, ensure you have the following installed:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:ramesh-madara/emp_salary_Vis_Prog_Assignment.git
    cd Assignment
    ```
 
@@ -152,23 +152,64 @@ Before running this application, ensure you have the following installed:
 Assignment/
 ├── Assignment/
 │   ├── Form1.cs                    # Main application form
+│   ├── Form1.Designer.cs           # Form designer code
+│   ├── Form1.resx                  # Form resources
 │   ├── Program.cs                  # Application entry point
 │   ├── DBConnector.cs              # Database connection manager
 │   ├── PayrollReport.cs            # Payroll report data model
 │   │
 │   ├── ucEmployee.cs               # Employee management module
+│   ├── ucEmployee.Designer.cs      # Employee module designer
+│   ├── ucEmployee.resx             # Employee module resources
+│   │
 │   ├── ucAttendance.cs             # Attendance tracking module
+│   ├── ucAttendance.Designer.cs    # Attendance module designer
+│   ├── ucAttendance.resx           # Attendance module resources
+│   │
 │   ├── ucDailyTotals.cs            # Daily totals management module
+│   ├── ucDailyTotals.Designer.cs   # Daily totals module designer
+│   ├── ucDailyTotals.resx          # Daily totals module resources
+│   │
 │   ├── ucPayroll.cs                # Payroll reports module
+│   ├── ucPayroll.Designer.cs       # Payroll module designer
+│   ├── ucPayroll.resx              # Payroll module resources
 │   │
 │   ├── ucAttendanceRow.cs          # Attendance row control
-│   ├── ucPayrollRow.cs             # Payroll row control
+│   ├── ucAttendanceRow.Designer.cs # Attendance row designer
+│   ├── ucAttendanceRow.resx        # Attendance row resources
 │   │
-│   ├── EmployeePayrollDBDataSet.*  # Typed dataset files
-│   └── Properties/                 # Application properties
+│   ├── ucPayrollRow.cs             # Payroll row control
+│   ├── ucPayrollRow.Designer.cs    # Payroll row designer
+│   ├── ucPayrollRow.resx           # Payroll row resources
+│   │
+│   ├── EmployeePayrollDBDataSet.Designer.cs  # Dataset designer
+│   ├── EmployeePayrollDBDataSet.xsc          # Dataset schema cache
+│   ├── EmployeePayrollDBDataSet.xsd          # Dataset schema
+│   ├── EmployeePayrollDBDataSet.xss          # Dataset schema stream
+│   │
+│   ├── App.config                  # Application configuration
+│   ├── Assignment.csproj           # Project file
+│   ├── packages.config             # NuGet packages configuration
+│   │
+│   ├── Properties/                 # Application properties
+│   │   ├── AssemblyInfo.cs
+│   │   ├── Resources.Designer.cs
+│   │   ├── Resources.resx
+│   │   ├── Settings.Designer.cs
+│   │   └── Settings.settings
+│   │
+│   ├── bin/                        # Compiled binaries
+│   └── obj/                        # Build artifacts
 │
 ├── packages/                       # NuGet packages
-└── Assignment.sln                  # Solution file
+├── readMeImgs/                     # README screenshots
+│   ├── Screenshot 2025-11-09 004645.png
+│   ├── Screenshot 2025-11-09 004744.png
+│   ├── Screenshot 2025-11-09 004828.png
+│   └── Screenshot 2025-11-09 0048h28.png
+│
+├── Assignment.sln                  # Solution file
+└── README.md                       # Project documentation
 ```
 
 ## 🚀 Usage
