@@ -238,7 +238,13 @@ Assignment/
 
 ## 📸 Screenshots
 
-_Add screenshots of your application here_
+![Screenshot 1](https://raw.githubusercontent.com/ramesh-madara/emp_salary_Vis_Prog_Assignment/main/readMeImgs/Screenshot%202025-11-09%20004645.png)
+
+![Screenshot 2](https://raw.githubusercontent.com/ramesh-madara/emp_salary_Vis_Prog_Assignment/main/readMeImgs/Screenshot%202025-11-09%20004744.png)
+
+![Screenshot 3](https://raw.githubusercontent.com/ramesh-madara/emp_salary_Vis_Prog_Assignment/main/readMeImgs/Screenshot%202025-11-09%20004828.png)
+
+![Screenshot 4](https://raw.githubusercontent.com/ramesh-madara/emp_salary_Vis_Prog_Assignment/main/readMeImgs/Screenshot%202025-11-09%200048h28.png)
 
 ## 🤝 Contributing
 
