@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using MaterialSkin.Controls; // Assuming you're using this
+using MaterialSkin.Controls; 
 
 namespace Assignment
 {
@@ -18,7 +18,6 @@ namespace Assignment
             dtpDate.Value = DateTime.Now;
             LoadExistingTotals();
 
-            // Add your decimal validation from the employee form
             txtServiceCharge.TextChanged += TxtServiceCharge_TextChanged;
             txtTipAmount.TextChanged += TxtTipAmount_TextChanged;
         }
@@ -28,7 +27,6 @@ namespace Assignment
             LoadExistingTotals();
         }
 
-        // Add your validation function (or a simplified one)
         private void TxtServiceCharge_TextChanged(object sender, EventArgs e)
         {
             AllowDecimalInput((MaterialTextBox)sender, TxtServiceCharge_TextChanged);
@@ -68,7 +66,6 @@ namespace Assignment
 
         private void LoadExistingTotals()
         {
-            // Clear textboxes first
             txtServiceCharge.Text = "0.00";
             txtTipAmount.Text = "0.00";
 
@@ -78,7 +75,6 @@ namespace Assignment
                 {
                     if (con == null) return;
 
-                    // Check Service Charge table
                     string scQuery = "SELECT serviceCharge FROM serviceCharge WHERE [date] = @Date";
                     SqlCommand scCmd = new SqlCommand(scQuery, con);
                     scCmd.Parameters.AddWithValue("@Date", dtpDate.Value.Date);
@@ -88,7 +84,6 @@ namespace Assignment
                         txtServiceCharge.Text = Convert.ToDecimal(scResult).ToString("0.00");
                     }
 
-                    // Check Tip table
                     string tipQuery = "SELECT tipAmount FROM tip WHERE [date] = @Date";
                     SqlCommand tipCmd = new SqlCommand(tipQuery, con);
                     tipCmd.Parameters.AddWithValue("@Date", dtpDate.Value.Date);
@@ -120,7 +115,6 @@ namespace Assignment
                 {
                     if (con == null) return;
 
-                    // --- Save Service Charge (MERGE) ---
                     string scQuery = @"
                         MERGE INTO serviceCharge AS target
                         USING (SELECT @Date AS [date]) AS source
@@ -135,7 +129,6 @@ namespace Assignment
                     scCmd.Parameters.AddWithValue("@Amount", serviceCharge);
                     scCmd.ExecuteNonQuery();
 
-                    // --- Save Tip (MERGE) ---
                     string tipQuery = @"
                         MERGE INTO tip AS target
                         USING (SELECT @Date AS [date]) AS source

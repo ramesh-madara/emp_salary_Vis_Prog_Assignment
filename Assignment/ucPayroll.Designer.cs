@@ -127,6 +127,7 @@
             this.Name = "ucPayroll";
             this.Size = new System.Drawing.Size(1200, 493);
             this.Load += new System.EventHandler(this.ucPayroll_Load);
+            this.Enter += new System.EventHandler(this.ucPayroll_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

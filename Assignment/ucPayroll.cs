@@ -23,6 +23,13 @@ namespace Assignment
         {
             LoadEmployeeComboBox();
         }
+        private void ucPayroll_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                LoadEmployeeComboBox();
+            }
+        }
 
         private void LoadEmployeeComboBox()
         {
@@ -89,7 +96,7 @@ namespace Assignment
                     currentReportData.Add(report);
                 }
 
-                flpPayrollPreview.Controls.Clear(); // Clear the panel
+                flpPayrollPreview.Controls.Clear(); 
 
                 foreach (PayrollReport report in currentReportData)
                 {
@@ -130,7 +137,7 @@ namespace Assignment
                     }
                 }
 
-                decimal hourlyRate = report.BasicSalary / (8 * 30); // 240 hours
+                decimal hourlyRate = report.BasicSalary / (8 * 30); 
 
                 string deductionQuery = @"
                     SELECT ISNULL(SUM(8 - workHours), 0) AS TotalHoursMissed
@@ -214,14 +221,12 @@ namespace Assignment
         }
         private void dtpMonth_ValueChanged(object sender, EventArgs e)
         {
-            // Clear the old results when the date changes
             flpPayrollPreview.Controls.Clear();
             currentReportData.Clear();
             btnExportPDF.Enabled = false;
         }
         private void cmbEmployees_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Clear the old results when the employee changes
             flpPayrollPreview.Controls.Clear();
             currentReportData.Clear();
             btnExportPDF.Enabled = false;
@@ -233,15 +238,13 @@ namespace Assignment
             PdfPage page = document.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            // --- Uses XFontStyle (singular) ---
             XFont fontTitle = new XFont("Arial", 20, XFontStyleEx.Bold);
             XFont fontHeader = new XFont("Arial", 14, XFontStyleEx.Bold);
             XFont fontBody = new XFont("Arial", 12, XFontStyleEx.Regular);
             XFont fontTotal = new XFont("Arial", 14, XFontStyleEx.Bold);
 
-            int y = 50; // Use simple int
+            int y = 50; 
 
-            // --- No XUnit.FromPoint() needed ---
             gfx.DrawString("Salary Payslip", fontTitle, XBrushes.Black, new XRect(0, y, page.Width, 0), XStringFormats.TopCenter);
             y += 50;
 
